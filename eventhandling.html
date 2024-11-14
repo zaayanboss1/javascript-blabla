@@ -1,0 +1,43 @@
+<html>
+    <head>
+<title>event handling</title>
+<style>
+    body.dark{
+        background-color: black; 
+        color: cornsilk;
+    }
+    button{
+        display: block;
+        margin: 5px;
+    }
+    .entryname{
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+</style>
+    </head>
+    <body>
+<h1>creepy story</h1>
+<p id="golpo">Every night, she heard her mother singing her a lullaby from the next room—until she remembered her mother had passed
+away years ago. When she checked the room, the singing stopped, but a faint whisper said, *"I’m still here."*</p>
+<button onclick="godark()">Set The Mood</button>
+<div class="entryname">I Dare You To Come Inside The Home <input type="text" id="name"></div>
+<button onclick="typeandscream()"> Dont touch me</button>
+<br>
+<button onclick="finishing()">I am curious</button>
+<script>
+    function typeandscream() {
+        var personname=document.getElementById("name").value;
+        alert ("I told you not to enter"+personname);
+    }
+    function godark() {
+       document.body.className="dark" ;
+       
+    }
+    function finishing() {
+        document.getElementById("golpo").innerHTML="you are trapped inside the haunted house";
+    }
+</script>
+
+    </body>
+</html>
