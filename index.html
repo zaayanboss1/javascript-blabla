@@ -33,8 +33,32 @@
         background-color: green;
         color: red;
       }
+      .myslider{
+        display: none;
+        max-height: 100%;
+        max-width: 100%;
+      }
+      .carousel-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+      }
+      h2{
+        text-align: center;
+        text-decoration: underline;
+        text-transform: capitalize;
+      }
+       p{
+   font-family:lucida;
+   font-size: large;
+   
+
+  }
+
     </style>
     </head>
+
     <body>
 <div class="topnav">
     <a href="#">Home</a>
@@ -43,8 +67,46 @@
     <a href="#">Contact Us</a>
 </div>
 <h1>Football Club</h1>
-<img src="https://cdn.prod.website-files.com/624377e20c9e225e2e55e2ed/66b59baacfbcf3c4c1507216_e1e55636-257c-4344-a069-666c0f27ade9_alta-libre-aspect-ratio_default_0.jpg"
-width="650"
-height="400">
+<p>Football, also known as soccer in some countries, is one of the most popular sports worldwide, played and loved by
+millions. It involves two teams of 11 players competing to score goals by maneuvering a ball into the opposing team’s
+net using any part of the body except hands and arms (except for the goalkeeper). Originating in England in the mid-19th
+century, the sport has grown into a global phenomenon with prestigious tournaments like the FIFA World Cup. Football
+emphasizes teamwork, strategy, and athleticism, captivating fans with its fast-paced action and dramatic moments. Beyond
+the game, it serves as a unifying force, bridging cultural and social divides around the world.</p>
+<h2>Best footballers in Football History</h2>
+<div class="carousel-container">
+  <img class="myslider"
+  src="https://i0.wp.com/sportytell.com/wp-content/uploads/2018/11/Cristiano-Ronaldo-celebrates-with-2016-Euros-trophy-.jpg?zoom=1.25&resize=680%2C849&ssl=1 " height="400" width="600" alt="Ronaldo">
+  <img class="myslider" 
+  src="https://keyassets.timeincuk.net/inspirewp/live/wp-content/uploads/sites/34/2024/11/GettyImages-1754429776-credit-FRANCK-FIFE-AFP-via-Getty-Images-920x609.jpg" height="400" width="600" alt="messi">
+  <img class="myslider" 
+  src="https://www.aljazeera.com/wp-content/uploads/2021/09/gettyimages-467547042-594x594-1.jpg?resize=570%2C380&quality=80" height="400" width="600" alt="pele">
+  <img class="myslider" 
+  src="https://tmssl.akamaized.net//images/foto/galerie/diego-maradona-1401100720-37.jpg" height="400" width="600" alt="maradona">
+  <img class="myslider"
+  src="https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iW8PRgUU4kAA/v1/-1x-1.webp" height="400" width="600" alt="zidane">
+  <img class="myslider" 
+  src="https://media.cnn.com/api/v1/images/stellar/prod/180717152959-mbappe-tease.jpg?q=w_2385,h_1590,x_0,y_0,c_fill" height="400" width="600" alt="mbappe">
+</div>
+<script>
+  var index=0;
+  function carousel() {
+    var i;
+    var x=document.getElementsByClassName("myslider");
+    for(i=0;i<x.length;i++){
+      
+      ``
+      x[i].style.display="none";
+    }
+    index++
+    if (index>x.length) {
+      index=1
+    }
+   x[index-1].style.display="block";
+   setTimeout(carousel,2000);
+  }
+  carousel ();
+ 
+</script>
     </body>
 </html>
