@@ -1,0 +1,68 @@
+<html>
+    <head>
+<style>
+    body{
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .topnav{
+        overflow: hidden;
+        background-color: blanchedalmond;
+    }
+    .topnav a{
+        float: left;
+        text-align: center;
+        padding: 14px 16px;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: none;
+    }
+    .topnav a:hover{
+        background-color: violet;
+        color:white ;
+    }
+    .topnav a:active{
+        color: white;
+        background-color: black;
+    }
+</style>
+    </head>
+    <body>
+        <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="portfoliowebsiteabout.html">About Us</a>
+    <a href="portfoliowebsitecontact.html">Contact</a>
+        </div>
+        <h2>BEAUTIFUL PLACES OF EARTH</h2>
+        <section>
+            <img class="myslides" src="https://tse4.mm.bing.net/th?id=OIP.JHYK9aw5p3Q4kqrGAKjP8gHaEc&pid=Api&P=0&h=220" height="500px"
+            width="500px">
+            <img class="myslides" src="http://cssslider.com/sliders/demo-17/data1/images/picjumbo.com_hanv9909.jpg" height="500px"
+            width="500px">
+            <img class="myslides" src="https://tse1.mm.bing.net/th?id=OIP.fopxvzcNw2WG4IIvOXQZJAAAAA&pid=Api&P=0&h=220" height="500px"
+            width="500px">
+            <img class="myslides" src="https://tse1.mm.bing.net/th?id=OIP.GqSzlXhRSmqcVv9FsVyfJQHaCU&pid=Api&P=0&h=220" height="500px"
+            width="500px">
+        </section>
+        <script>
+            var myindex=0
+            carousel();
+            function carousel() {
+                var i;
+                var x=document.getElementsByClassName("myslides");
+                for (i=0; i<x.length;i++){
+                    x[i].style.display="none";
+                }
+                myindex++;
+                if(myindex>x.length){
+                    myindex=1
+
+                }
+                x[myindex-1].style.display="block";
+                setTimeout(carousel,3000);
+            }
+            
+        </script>
+    </body>
+</html>
