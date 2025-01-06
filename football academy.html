@@ -53,7 +53,7 @@
 
         width:100% ;
         height: 400px;
-        display: none;
+        
       }
 </style>
     </head>
@@ -61,19 +61,42 @@
 <div class="topnav">
     <a href="football academy.html">Home</a>
     <a href="footballacademyabout.html">About Us</a>
-    <a href="">Training Programs</a>
-    <a href="">Contact Us</a>
+    <a href="footballacademytraining.html">Training Programs</a>
+    <a href="football academy contact">Contact Us</a>
    
 </div>
 
 
  <h1 class="heading">Zaayan's Football Academy</h1>
  <div class="slideshow">
-<img class="images" src="https://sportytell.com/wp-content/uploads/2019/11/Best-Soccer-Academies-In-The-World.jpg">
+<img class="images" src="https://tse2.mm.bing.net/th?id=OIP.f-t_6Hmzsjb6kxdvZh9A3AHaE8&pid=Api&P=0&h=220">
 <img class="images" src="https://en.psg.fr/media/17450/academy-football-ouverture.jpg" >
 <img class="images" src="https://sportytell.com/wp-content/uploads/2019/11/Best-Soccer-Academies-In-The-World.jpg">
 <img class="images" src="https://idsb.tmgrup.com.tr/ly/uploads/images/2022/11/09/240365.jpg">
 
 </div>
+<script>
+
+  let index = 0;
+
+  function showSlides() {
+
+    const slides = document.querySelectorAll('.images');
+
+    slides.forEach((slide, i) => {
+
+      slide.style.display = i === index ? 'block' : 'none';
+
+    });
+
+    index = (index + 1) % slides.length;
+
+    setTimeout(showSlides, 3000);
+
+  }
+
+  showSlides();
+
+</script>
     </body>
     </html>
